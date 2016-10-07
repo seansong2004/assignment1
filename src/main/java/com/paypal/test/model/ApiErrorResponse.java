@@ -12,10 +12,10 @@ public class ApiErrorResponse {
 
     public ApiErrorResponse() {}
 
-    public ApiErrorResponse(int status, int code, String message) {
+    public ApiErrorResponse(int status, int code, Exception ex) {
         this.status = status;
         this.code = code;
-        this.message = message;
+        this.message = ex.getMessage();
     }
 
     public int getStatus() {

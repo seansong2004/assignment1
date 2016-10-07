@@ -50,8 +50,7 @@ class StringRestController {
                     HttpStatus.OK);
         }
         catch (Throwable e) {
-            logger.error(e.getMessage(), e);
-            throw new NotFoundException("");
+            throw new NotFoundException(e.getMessage(), e);
         }
     }
 }

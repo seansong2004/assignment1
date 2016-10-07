@@ -40,7 +40,7 @@ public class StringService {
 
     public List<String> get(long id) {
         try {
-            return repository.get(id).orElseThrow(() -> new NotFoundException("no string"));
+            return repository.get(id).orElseThrow(() -> new NotFoundException("no string on id " + id));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
