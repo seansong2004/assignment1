@@ -22,7 +22,7 @@ import java.util.List;
 @SpringBootTest
 public class StringRepositoryITest {
     @Autowired
-    StringRepository repository;
+    StringLocalFileRepository repository;
 
     @Autowired
     IdGeneratorService idGeneratorService;

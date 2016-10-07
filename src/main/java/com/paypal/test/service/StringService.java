@@ -2,7 +2,7 @@ package com.paypal.test.service;
 
 import com.paypal.test.entity.StringEntity;
 import com.paypal.test.exception.NotFoundException;
-import com.paypal.test.repository.StringRepository;
+import com.paypal.test.repository.StringLocalFileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
@@ -17,11 +17,11 @@ import java.util.List;
 public class StringService {
 
     private final IdGeneratorService idGeneratorService;
-    private final StringRepository repository;
+    private final StringLocalFileRepository repository;
 
     @Autowired
     public StringService(IdGeneratorService idGeneratorService,
-                         StringRepository repository) {
+                         StringLocalFileRepository repository) {
         Assert.notNull(idGeneratorService);
         Assert.notNull(repository);
         this.idGeneratorService = idGeneratorService;

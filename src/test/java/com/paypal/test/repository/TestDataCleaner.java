@@ -1,6 +1,5 @@
 package com.paypal.test.repository;
 
-import com.paypal.test.repository.StringRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -14,7 +13,7 @@ import java.nio.file.Path;
 @Component
 public class TestDataCleaner {
     @Autowired
-    StringRepository repository;
+    StringLocalFileRepository repository;
 
     public void delete(long id) {
         Path path = repository.getPath(id);
